@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">    
+      <title>Vue Test</title>
+      <link rel="stylesheet" href="styles.css" />
+      <script src="https://unpkg.com/vue"></script>
+  </head>
+  <body>
+      <div id="app">       
+          <table>
+            <caption>teste in Vue</caption><br>
+              <tr>
+                <th>Comanda</th>
+                <th>Rezultat</th>
+              </tr>
+              <tr>
+                <td>{{}}</td>
+                <td>{{ name }}</td>
+              </tr>
+              <tr>
+                <td>calcul simplu</td>
+                <td>{{ newAge() }}</td>
+              </tr>
+                <td>v-bind:</td>
+                <td><input type="text" :value="name" /></td>
+              </tr>
+                <td>v-html</td>
+                <td><p v-html="web"></p></td>
+              </tr>
+                <td>
+                  @click adauga un an, @dblclick aduga 2 ani
+                </td>
+                <td>
+                  <strong><input type="text" :value="age" /></strong>
+                  <button @click="adaugaAn(1)" @dblclick="adaugaAn(2)">Adauga</button>
+                  <button @click="scadeAn(1)" @dblclick="scadeAn(2)">Scade</button>
+                </td>
+              </tr>
+              <tr>
+                <td>mouse</td>
+                <td>
+                  <div class="canvas" @mousemove="arataXY">{{x}}, {{y}} </div>
+                </td>
+              </tr>
+          </table>			
+      </div>
+      <script src="sandbox.js"></script>
+  </body>
+</html>
